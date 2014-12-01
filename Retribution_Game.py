@@ -10,6 +10,28 @@
             
 #print "you open up the cell doors and walk out.. thinking about what you have just been told"
 
+#Characters you can talk to:
+#Panther of the fresh breath
+#
+
+#Monster List:
+#Gryllus
+#Basilisk
+#Naga
+#Pholos
+#Sphinx
+#
+#Grunts:
+#
+#
+
+#Bosses:
+#The Phantom Revenant (Malfectorum Reditum)
+#
+
+Gryllus
+
+
 # Name System
 nameName = False
 name = 'Mary'
@@ -28,5 +50,5 @@ while nameName == False:
         nameName = True
     else:
         nameName = False
-        
+
 
