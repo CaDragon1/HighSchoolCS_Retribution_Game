@@ -1,4 +1,4 @@
-# retribution
+# Retribution
 #print "Congratulation,you are on probation period, now until you have done gotten the item, you will be a free man. task you have completed this task. You can be free whenever you have completed this task"
 #print "ok sir!"
 
@@ -9,5 +9,9 @@
 #show(pict)
             
 #print "you open up the cell doors and walk out.. thinking about what you have just been told"
-name = str(raw_input())
-print "So your name is " + name + "?"
+nameName = False
+if nameName == False:
+    print 'What is your name?'
+    name = str(raw_input())
+    print "So your name is " + name + "?"
+    if
