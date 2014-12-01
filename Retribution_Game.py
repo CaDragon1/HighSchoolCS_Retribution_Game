@@ -12,10 +12,11 @@
 
 # Name System
 nameName = False
+name = 'Mary'
 while nameName == False:
     print 'What is your name?'
     name = str(raw_input())
-    while name == 'falcon punch' or 'Captain Falcon':
+    if name == 'Captain Falcon':
         print ' '
         print '*******************'
         print 'Show me your moves!'
