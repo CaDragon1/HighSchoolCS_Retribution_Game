@@ -10,8 +10,12 @@
             
 #print "you open up the cell doors and walk out.. thinking about what you have just been told"
 nameName = False
-if nameName == False:
+while nameName == False:
     print 'What is your name?'
     name = str(raw_input())
-    print "So your name is " + name + "?"
-    if
+    print "So your name is " + name + ", yes or no?"
+    yesOrNo = str(raw_input())
+    if yesOrNo == 'yes' or yesOrNo == 'Yes':
+        nameName = True
+    else:
+        nameName = False
