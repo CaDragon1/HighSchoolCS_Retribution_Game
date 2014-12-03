@@ -15,21 +15,29 @@
 #
 
 #Monster List:
-#Gryllus
+#Munitate Deer
 #Basilisk
 #Naga
 #Pholos
 #Sphinx
 #
-#Grunts:
+#Grunt
 #
 #
 
 #Bosses:
 #The Phantom Revenant (Malfectorum Reditum)
-#
+damage = 0
+HP = 100
+def Munitate():
+    def Headbutt():
+        global damage
+        global HP
+        print 'The Munitate Deer rushes forward, headbutting you.'
+        damage = 6
+        HP = HP - 6
+        print 'You now have ' + HP + ' health left.'
 
-Gryllus
 
 
 # Name System
