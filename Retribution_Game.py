@@ -50,16 +50,16 @@ def Minion():
 
 # Name System
 nameName = False
-name = 'Mary'
+name = 'JonJacobJingleheimershmidt'
 while nameName == False:
     print 'What is your name?'
     name = str(raw_input())
     if name == 'Captain Falcon':
-        print ' '
+        print ''
         print '*******************'
         print 'Show me your moves!'
         print '*******************'
-        print ' '
+        print ''
     print "So your name is " + name + ", yes or no?"
     yesOrNo = str(raw_input())
     if yesOrNo == 'yes' or yesOrNo == 'Yes':
