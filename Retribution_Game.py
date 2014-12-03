@@ -18,6 +18,7 @@
 #The Phantom Revenant (Malfectorum Reditum)
 damage = 0
 HP = 100
+Wut = False
 def Minion():
     def Swipe():
         global damage
@@ -34,10 +35,17 @@ def Minion():
         damage = 5
         HP = HP - damage
         print 'You are left with ' + HP + ' HP.'
-    def Scream():
+    def Tackle():
         global damage
         global HP
-
+        if Wut == False:
+            print 'The zombie does its best impression of a leap, somehow managing to catch you.'
+        else:
+            print 'The zombie does its best impression of a leap, somehow managing to catch you... AGAIN.'
+        print 'He clings and starts inflicting damage, and you struggle for a moment until you throw him off.'
+        damage = 7
+        HP = HP - damage
+        print 'You get up with ' + HP + ' health.'
 
 
 # Name System
