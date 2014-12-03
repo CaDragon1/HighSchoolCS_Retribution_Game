@@ -14,29 +14,29 @@
 #Panther of the fresh breath
 #
 
-#Monster List:
-#Munitate Deer
-#Basilisk
-#Naga
-#Pholos
-#Sphinx
-#
-#Grunt
-#
-#
-
 #Bosses:
 #The Phantom Revenant (Malfectorum Reditum)
 damage = 0
 HP = 100
-def Munitate():
-    def Headbutt():
+def Minion():
+    def Swipe():
         global damage
         global HP
-        print 'The Munitate Deer rushes forward, headbutting you.'
-        damage = 6
-        HP = HP - 6
+        print 'The undead Minion swipes at you, striking you in the chest.'
+        damage = 3
+        HP = HP - damage
         print 'You now have ' + HP + ' health left.'
+    def Bite():
+        global damage
+        global HP
+        print 'The undead Minion bites your arm, but your undead ward prevents you from getting infected.'
+        print 'You knock it off of your arm and it stumbles back.'
+        damage = 5
+        HP = HP - damage
+        print 'You are left with ' + HP + ' HP.'
+    def Scream():
+        global damage
+        global HP
 
 
 
