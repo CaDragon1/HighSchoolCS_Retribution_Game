@@ -71,12 +71,33 @@ def Minion():
 def UserAttack():
     def slash():
         global damage
+        global minionHP
+        damage = 10
+        if minionHP > 9:
+            minionHP = minionHP - damage
+        else:
+            minionHP = 0
+        print 
     def shieldBash():
         global damage
+        global minionHP
+        damage = 8
+        if minionHP > 7:
+            minionHP = minionHP - damage
+        else:
+            minionHP = 0
     def stab():
         global damage
+        global minionHP
+        damage = 7
+        if minionHP > 6:
+            minionHP = minionHP - damage
+        else:
+            minionHP = 0
     def guard():
         global block
+        print "You raise your shield."
+        block = block + 6
 
 
 # Name System
