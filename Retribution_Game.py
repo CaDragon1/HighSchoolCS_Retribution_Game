@@ -21,6 +21,8 @@ HP = 100
 Wut = False
 block = 0
 minionHP = 25
+boss = False
+bossHP = 200
 def Minion():
     def Swipe():
         global damage
@@ -72,11 +74,17 @@ def UserAttack():
     def slash():
         global damage
         global minionHP
+        global bossHP
         damage = 10
         if minionHP > 9:
             minionHP = minionHP - damage
         else:
             minionHP = 0
+        if boss == True:
+            if bossHP > 9:
+                bossHP = bossHP - damage
+            else:
+                bossHP = 0
         print 
     def shieldBash():
         global damage
