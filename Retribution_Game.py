@@ -74,14 +74,15 @@ def UserAttack():
     def slash():
         global damage
         global minionHP
-        global bossHP      
-        if minionHP > 9:
-            damage = 10
-            minionHP = minionHP - damage
-            print 'You swing your sword, giving a large gash to the minion and doing ' + str(damage) + ' damage. The minion now has ' + minionHP + ' HP.'
-        else:
-            minionHP = 0
-            print "You cut off the minion's head and he staggers, falling to the ground in defeat."
+        global bossHP
+        if boss == False:      
+            if minionHP > 9:
+                damage = 10
+                minionHP = minionHP - damage
+                print 'You swing your sword, giving a large gash to the minion and doing ' + str(damage) + ' damage. The minion now has ' + minionHP + ' HP.'
+            else:
+                minionHP = 0
+                print "You cut off the minion's head and he staggers, falling to the ground in defeat."
         if boss == True:
             if bossHP > 11:
                 if bossHP == 42:
@@ -99,10 +100,23 @@ def UserAttack():
         global damage
         global minionHP
         damage = 8
-        if minionHP > 7:
-            minionHP = minionHP - damage
-        else:
-            minionHP = 0
+        if boss == False:
+            if minionHP > 7:
+                minionHP = minionHP - damage
+            else:
+                minionHP = 0
+        if boss == True:
+            if bossHP > 11:
+                if bossHP == 42:
+                    print 'You strike the phantom revenant with the meaning of life. It sends off a blinding light and he withers before your eyes.'
+                    bossHP = 15
+                    print 'The light diminishes, leaving the revenant with 15 HP left. You follow that up with a sword strike.'
+                damage = 14
+                bossHP = bossHP - damage
+                print 'Your sword slashes through the air in a wide arc. It strikes the revenant, taking some of the darkness with it.'
+                print 'The revenant now has' + bossHP + 'HP.'
+            else:
+                bossHP = 0
     def stab():
         global damage
         global minionHP
