@@ -99,6 +99,8 @@ def UserAttack():
     def shieldBash():
         global damage
         global minionHP
+        global boss
+        global bossHP
         damage = 8
         if boss == False:
             if minionHP > 7:
@@ -109,8 +111,8 @@ def UserAttack():
             if bossHP > 11:
                 if bossHP == 42:
                     print 'You strike the phantom revenant with the meaning of life. It sends off a blinding light and he withers before your eyes.'
-                    bossHP = 15
-                    print 'The light diminishes, leaving the revenant with 15 HP left. You follow that up with a sword strike.'
+                    bossHP = 16
+                    print 'The light diminishes, leaving the revenant with 16 HP left. You follow that up with a shield bash.'
                 damage = 14
                 bossHP = bossHP - damage
                 print 'Your sword slashes through the air in a wide arc. It strikes the revenant, taking some of the darkness with it.'
