@@ -28,7 +28,7 @@ def Minion():
         global damage
         global HP
         global block
-        print 'The undead Minion swipes at you, striking you in the chest.'
+        print 'The undead minion swipes at you, striking you in the chest.'
         damage = 3
         HP = HP - damage + block
         if block > 2:
@@ -41,7 +41,7 @@ def Minion():
         global damage
         global HP
         global block
-        print 'The undead Minion bites your arm, but your undead ward prevents you from getting infected.'
+        print 'The undead minion bites your arm, but your undead ward prevents you from getting infected.'
         print 'You knock it off of your arm and it stumbles back.'
         damage = 5
         HP = HP - damage + block
@@ -57,9 +57,9 @@ def Minion():
         global block
         global Wut
         if Wut == False:
-            print 'The zombie does its best impression of a leap, somehow managing to catch you.'
+            print 'The undead minion does its best impression of a leap, somehow managing to catch you.'
         if Wut == True:
-            print 'The zombie does its best impression of a leap, somehow managing to catch you... AGAIN.'
+            print 'The undead minion does its best impression of a leap, somehow managing to catch you... AGAIN.'
         print 'He clings and starts inflicting damage, and you struggle for a moment until you throw him off.'
         damage = 7
         HP = HP - damage + block
@@ -78,8 +78,10 @@ def UserAttack():
         damage = 10
         if minionHP > 9:
             minionHP = minionHP - damage
+            print 'You swing your sword, giving a large gash to the minion and doing ' + str(damage) + ' damage. The minion now has ' + minionHP + ' HP.'
         else:
             minionHP = 0
+            print
         if boss == True:
             if bossHP > 9:
                 bossHP = bossHP - damage
