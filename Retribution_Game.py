@@ -101,36 +101,54 @@ def UserAttack():
         global minionHP
         global boss
         global bossHP
-        damage = 8
         if boss == False:
             if minionHP > 7:
+                damage = 8
                 minionHP = minionHP - damage
             else:
                 minionHP = 0
         if boss == True:
             if bossHP > 11:
                 if bossHP == 42:
-                    print 'You strike the phantom revenant with the meaning of life. It sends off a blinding light and he withers before your eyes.'
+                    print 'You smash your shield into the phantom revenant with the meaning of life. It sends off a blinding light and he withers before your eyes.'
                     bossHP = 16
                     print 'The light diminishes, leaving the revenant with 16 HP left. You follow that up with a shield bash.'
                 damage = 14
                 bossHP = bossHP - damage
-                print 'Your sword slashes through the air in a wide arc. It strikes the revenant, taking some of the darkness with it.'
+                print 'You swing your shield and it smashes into the revenant, knocking him backwards.'
                 print 'The revenant now has' + bossHP + 'HP.'
             else:
                 bossHP = 0
     def stab():
         global damage
         global minionHP
+        global boss
+        global bossHP
         damage = 7
         if minionHP > 6:
             minionHP = minionHP - damage
         else:
             minionHP = 0
+        if boss == True:
+            if bossHP > 11:
+                if bossHP == 42:
+                    print "You thrust your sword into the revenant's body and infuse it with the meaning of life. The revenant starts dissolving internally, but it pulls away at the last second."
+                    bossHP = 12
+                    print 'The revenant has 12 HP left. You advance once more, hoping to stab it again.'
+                damage = 11
+                bossHP = bossHP - damage
+                print 'You stab the revenant.'
+                print 'The revenant now has' + bossHP + 'HP.'
+            else:
+                bossHP = 0
     def guard():
         global block
+        if bossHP == 42:
+            print "Using the meaning of life, your shield is strengthened, giving you extra defense."
+            block = block + 36
         print "You raise your shield."
         block = block + 6
+        print "You have " + block + " shield points."
 
 
 # Name System
