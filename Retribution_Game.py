@@ -18,11 +18,11 @@
 #The Phantom Revenant (Malfectorum Reditum)
 damage = 0
 HP = 100
-Wut = False
 block = 0
-minionHP = 25
-boss = False
+minionHP = 35
 bossHP = 200
+Wut = False
+boss = False
 #Minion attacks
 def Swipe():
         global damage
@@ -35,7 +35,7 @@ def Swipe():
             block = block - 3
         else:
             block = 0
-        print 'You now have ' + HP + ' health left.'
+        print 'You now have ' + str(HP) + ' health left.'
         return
 def Bite():
         global damage
@@ -49,7 +49,7 @@ def Bite():
             block = block - 5
         else:
             block = 0
-        print 'You are left with ' + HP + ' HP.'
+        print 'You are left with ' + str(HP) + ' HP.'
         return
 def Tackle():
         global damage
@@ -67,9 +67,27 @@ def Tackle():
             block = block - 7
         else:
             block = 0
-        print 'You get up with ' + HP + ' health.'
+        print 'You get up with ' + str(HP) + ' health.'
         Wut = True
         return
+#Boss moves
+def darkPulse():
+    global damage
+    global HP
+    global block
+    global bossHP
+    if bossHP > 0:
+        if bossHP > 50:
+            damage = 8
+        else:
+            damage = 10
+        print "A wave of darkness sweeps out from the revenant. " + name + " struggles in the suffocating, crushing shadow."
+        HP = damage - block
+        if damage < block:
+            block = block - damage
+            print "His shield helps protect against    
+        else:
+            block = 0
 #Your moves
 def slash():
         global damage
@@ -92,7 +110,7 @@ def slash():
                 damage = 12
                 bossHP = bossHP - damage
                 print 'Your sword slashes through the air in a wide arc. It strikes the revenant, taking some of the darkness with it.'
-                print 'The revenant now has' + bossHP + 'HP.'
+                print 'The revenant now has' + str(bossHP) + 'HP.'
             else:
                 bossHP = 0
         print 
@@ -116,7 +134,7 @@ def shieldBash():
                 damage = 14
                 bossHP = bossHP - damage
                 print 'You swing your shield and it smashes into the revenant, knocking him backwards.'
-                print 'The revenant now has' + bossHP + 'HP.'
+                print 'The revenant now has' + str(bossHP) + 'HP.'
             else:
                 bossHP = 0
 def stab():
@@ -138,7 +156,7 @@ def stab():
                 damage = 11
                 bossHP = bossHP - damage
                 print 'You stab the revenant.'
-                print 'The revenant now has' + bossHP + 'HP.'
+                print 'The revenant now has' + str(bossHP)+ 'HP.'
             else:
                 bossHP = 0
 def guard():
@@ -146,9 +164,9 @@ def guard():
         if bossHP == 42:
             print "Using the meaning of life, your shield is strengthened, giving you extra defense."
             block = block + 36
-        print "You raise your shield."
+        print "You raise your shield to defend yourself."
         block = block + 6
-        print "You have " + block + " shield points."
+        print "You now have " + str(block) + " shield points."
 
 
 # Name System
@@ -170,20 +188,12 @@ while nameName == False:
     else:
         nameName = False
 
-# retribution
-#print "Congratulation,you are on probation period, now until you have done gotten the item, you will be a free man. task you have completed this task. You can be free whenever you have completed this task"
 
-#print "ok sir!"
-
-
-#from ImageLibrary import *
 #myfile=pickAFile("\Users\Public\Pictures\Sample Pictures\Ff14-class-archer.jpg")
 #pict=makePicture("\Users\Public\Pictures\Sample Pictures\Ff14-class-archer.jpg")
 #show(pict)
-#undead ward so dont get infected
-#print "you open up the cell doors and walk out.. thinking about what you have just been told"
 
-    
+
 print "(Remember to advance text using the enter/return key!)"
 print ''
 print "Warden: So you're the lucky prisoner, eh " + name + "? You have been given an assignment. If you can complete it, then you can go free."
@@ -193,7 +203,7 @@ if userInput == "":
 print "Warden: You will be informed once you arrived. There is a carriage outside that will take you to Felador. Once you arrive, you will recieve further instructions."
 if userInput == "":
     print ""
-print " -About 15-20 minutes later, " +name + "appears at Felador.-"
+print " -About 15-20 minutes later, " + name + "appears at Felador.-"
 if userInput == "":
     print ''
 print name + " walks up to Felador Castle, where two guards meet him."
@@ -209,42 +219,3 @@ if userInput == "":
     print 'Guard 1: He should be right inside, go on ahead and talk to him.'
 print name + " opens the huge door and walks through. Inside he spots an armored man wearing the red sash that signifies his rank."
 print "It is because of this that you can tell that he is the captain."
-userInput = raw_input()
-if userInput == "":
-    print ''
-print " you can smell something but you disregard it.. but you follow the map to"
-userInput = raw_input()
-if userInput == "":
-    print ''
-print ""
-print "you walk for around 10 minutes, following the map, and you finally find something interesting.."
-userInput = raw_input()
-if userInput == "":
-    print ''
-print ""
-print "you find a grunt on the floor..."
-userInput = raw_input()
-if userInput == "":
-    print ''
-print ""
-print "it's already bleeding out on the floor from the previos person.. and you just step on it to finish it off."
-print "you continute walking.. and you see a bloody sign saying chamber of the Phantom Revenant."
-print "You don't think anything of it. And you continue watching it"
-print ""
-print "You feel it getting a LOT hotter... and also getting gnawed on by a bunch of little creatures.. oh wait those are the grunts.."
-print "you beat the little grunts off of you as fast as you are able to, in disbelief aswell."
-userInput = raw_input()
-if userInput == "":
-    print ''
-print ""
-print "You keep walking and you spot the phantom.. phantom revenant."
-print "you... you are the one who has the items i need... you aren't leaving here alive.."
-print ""
-print ""
-print ""
-print ""
-print ""
-print ""
-print ""
-
-
