@@ -186,30 +186,29 @@ while nameName == False:
     
 print "(Remember to advance text using the enter/return key!)"
 print ''
-print "Warden- So you're the lucky prisoner, eh " + name + "? You have been given an assignment. If you can complete it, then you can go free."
+print "Warden: So you're the lucky prisoner, eh " + name + "? You have been given an assignment. If you can complete it, then you can go free."
 userInput = raw_input()
 if userInput == "":
-    print name + "- What is the assignment?"
-print "Warden- You will be informed once you arrived. There is a carriage outside that will take you to Felador. Once you arrive, you will recieve further instructions."
+    print name + ": What is the assignment?"
+print "Warden: You will be informed once you arrived. There is a carriage outside that will take you to Felador. Once you arrive, you will recieve further instructions."
 if userInput == "":
     print ""
 print " -About 15-20 minutes later, " +name + "appears at Felador.-"
-print " he walks up to a castle, there are 2 guards..."
-print " with the muffleness of the mask, the guard asks, who comes here?"
-print " my name is " + name, "i got told to come here as i am now on probation i was told to come here to retrieve my item for the final present."
-print " which prison do you come from? "
-userInput = raw_input()
 if userInput == "":
     print ''
-print " regolith prison "
-userInput = raw_input()
+print name + " walks up to Felador Castle, where two guards meet him."
+print 'Guard 1: What brings you here?'
 if userInput == "":
     print ''
-print " fine, you have 1 chance. we have our eyes on you" + name
-userInput = raw_input()
+print name + ": My name is " + name + ". I was sent here from Regolith prison. They said that there was a task for me...?"
 if userInput == "":
     print ''
-print " you open the huge door and walk thorugh the huge door"
+print "Guard 2: Oh, you're the guy that we were told to bring you to the captain."
+userInput = raw_input()
+if userInput == "":
+    print 'Guard 1: He should be right inside, go on ahead and talk to him.'
+print name + " opens the huge door and walks through. Inside he spots an armored man wearing the red sash that signifies his rank."
+print "It is because of this that you can tell that he is the captain."
 userInput = raw_input()
 if userInput == "":
     print ''
