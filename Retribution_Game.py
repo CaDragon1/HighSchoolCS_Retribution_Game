@@ -44,10 +44,12 @@ def Bite():
         print 'You are left with ' + str(HP) + ' HP.'
         return
 def Tackle():
-        global damage
-        global HP
-        global block
-        global Wut
+    global minionHP
+    global damage
+    global HP
+    global block
+    global Wut
+    if minionHP > 0:
         if Wut == False:
             print 'The undead minion does its best impression of a leap, somehow managing to catch you.'
         if Wut == True:
@@ -61,7 +63,7 @@ def Tackle():
             block = 0
         print 'You get up with ' + str(HP) + ' health.'
         Wut = True
-        return
+    return
 #Boss moves
 def darkPulse():
     global damage
@@ -84,7 +86,8 @@ def darkPulse():
             print "Your shield blocks some of the attack, but your shield points dropped to 0 and you are forced to take a knee to endure the rest. The darkness recedes and you stand up with " + str(HP) + "HP left."
         else:
             HP = damage - block
-            print "The darkness 
+            print "The darkness damages you, knocking you to the ground. You lay there as the shadows press around you until they recede. You pick yourself off the ground with " + str(HP) + "HP left."
+    return
 #Your moves
 def slash():
         global damage
