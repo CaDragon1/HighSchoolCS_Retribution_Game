@@ -1,21 +1,13 @@
-# Retribution
-#print "Congratulation,you are on probation period, now until you have done gotten the item, you will be a free man. task you have completed this task. You can be free whenever you have completed this task"
-#print "ok sir!"
-
-
-#from ImageLibrary import *
-#myfile=pickAFile("\Users\Public\Pictures\Sample Pictures\Ff14-class-archer.jpg")
-#pict=makePicture("\Users\Public\Pictures\Sample Pictures\Ff14-class-archer.jpg")
-#show(pict)
-            
-#print "you open up the cell doors and walk out.. thinking about what you have just been told"
-
 #Characters you can talk to:
 #Panther of the fresh breath
 #
 
 #Bosses:
 #The Phantom Revenant (Malfectorum Reditum)
+
+#Monsters:
+#
+
 damage = 0
 HP = 100
 block = 0
@@ -81,13 +73,18 @@ def darkPulse():
             damage = 8
         else:
             damage = 10
-        print "A wave of darkness sweeps out from the revenant. " + name + " struggles in the suffocating, crushing shadow."
-        HP = damage - block
+        print "A wave of darkness sweeps out from the revenant. You struggle in the suffocating, crushing shadow."
         if damage < block:
+            HP = damage - block
             block = block - damage
-            print "His shield helps protect against    
-        else:
+            print "Your shield protected you against the attack and the darkness recedes, leaving you with " + str(block) + " shield points."
+        elif damage > block and block > 0:
+            HP = damage - block
             block = 0
+            print "Your shield blocks some of the attack, but your shield points dropped to 0 and you are forced to take a knee to endure the rest. The darkness recedes and you stand up with " + str(HP) + "HP left."
+        else:
+            HP = damage - block
+            print "The darkness 
 #Your moves
 def slash():
         global damage
