@@ -23,8 +23,8 @@ block = 0
 minionHP = 25
 boss = False
 bossHP = 200
-def Minion():
-    def Swipe():
+#Minion attacks
+def Swipe():
         global damage
         global HP
         global block
@@ -37,7 +37,7 @@ def Minion():
             block = 0
         print 'You now have ' + HP + ' health left.'
         return
-    def Bite():
+def Bite():
         global damage
         global HP
         global block
@@ -51,7 +51,7 @@ def Minion():
             block = 0
         print 'You are left with ' + HP + ' HP.'
         return
-    def Tackle():
+def Tackle():
         global damage
         global HP
         global block
@@ -70,8 +70,8 @@ def Minion():
         print 'You get up with ' + HP + ' health.'
         Wut = True
         return
-def UserAttack():
-    def slash():
+#Your moves
+def slash():
         global damage
         global minionHP
         global bossHP
@@ -96,7 +96,7 @@ def UserAttack():
             else:
                 bossHP = 0
         print 
-    def shieldBash():
+def shieldBash():
         global damage
         global minionHP
         global boss
@@ -119,7 +119,7 @@ def UserAttack():
                 print 'The revenant now has' + bossHP + 'HP.'
             else:
                 bossHP = 0
-    def stab():
+def stab():
         global damage
         global minionHP
         global boss
@@ -141,7 +141,7 @@ def UserAttack():
                 print 'The revenant now has' + bossHP + 'HP.'
             else:
                 bossHP = 0
-    def guard():
+def guard():
         global block
         if bossHP == 42:
             print "Using the meaning of life, your shield is strengthened, giving you extra defense."
