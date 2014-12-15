@@ -271,3 +271,47 @@ if userInput == "":
     print 'Guard 1: He should be right inside, go on ahead and talk to him.'
 print name + " opens the huge door and walks through. Inside he spots an armored man wearing the red sash that signifies his rank."
 print "It is because of this that you can tell that he is the captain."
+userInput = raw_input()
+if userInput == "":
+print " You can smell something but you disregard it.. But you follow the map to"
+userInput = raw_input()
+if userInput == "":
+print ""
+print "You walk for around 10 minutes, following the map, and you finally find something interesting.."
+userInput = raw_input()
+if userInput == "":
+print ""
+print "You find an undead minion on the floor..."
+userInput = raw_input()
+if userInput == "":
+print ""
+print "It's already bleeding out on the floor from the previos person.. and you just step on it to finish it off."
+print "You continute walking.. and you see a bloody sign saying chamber of the Phantom Revenant."
+print "You don't think anything of it. And you continue watching it"
+print ""
+print "You feel it getting a LOT hotter... and also getting gnawed on by a bunch of little creatures.. oh wait those are the undead minions.."
+print "You beat the little grunts off of you as fast as you are able to, in disbelief aswell."
+userInput = raw_input()
+if userInput == "":
+print ""
+print "You keep walking and you spot the phantom.. phantom revenant."
+print "You... you are the one who has the items i need... you aren't leaving here alive.."
+print "You have multiple attacks to attack the Revenant, use them wisely."
+print "1- 2- 3- 4- 5-"
+print ""
+#you'll need it to print your hp, their hp and how much damage it did etc for each one.."
+print "Wow... you defeated the revenant.. really..?"
+print "You walk forward.. barely being able to walk, to go grab your items you need from the Revenant."
+print "You pick up the items, and you feel accomplished..You take out the map and unscroll it"
+print "You put it into your backpack.. zip it up and get ready to walk out to go back to the prison to give to your probation officer."
+print "You walk towards the huge doors, and barely can open them because you are so tired.."
+print "You open the door up and look towards the guards, who just watch as you walk away..."
+print "You start walking back towards the prison and after a mile or so of walking.. you finally ending up at the prison."
+print "Who the heck are you?? The guard said to Warden."
+print "I have the items for the king so i can be free."
+print "Fine.. go ahead..."
+print "You walk in and find the officer. Sir.. here is your items as you hand them to him.."
+print "What.. How did you.. Ehat"
+print "Three days later... he wraps up the gift to give it to the king... Here you go sir"
+print "He hands it over... he opens it.."
+print "What.. How.. How did you.. Thank you.."
