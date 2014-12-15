@@ -37,11 +37,16 @@ def Bite():
         print 'You knock it off of your arm and it stumbles back.'
         damage = 5
         HP = HP - damage + block
-        if block > 4:
+        if block > damage:
             block = block - 5
-        else:
+            print "Fortunately, it didn't bite through your tunic. You now have " + block + " shield points."
+        elif block > damage and block > 0:
             block = 0
-        print 'You are left with ' + str(HP) + ' HP.'
+            HP = HP - (damage - block)
+            print 'You examine the wound, but it is not bad. You now have 0 shield points and ' + HP + ' HP.'
+        else:
+            HP = HP - damage
+            print 'You examine the wound and see it bleeding out. You are left with ' + str(HP) + ' HP.'
         return
 def Tackle():
     global minionHP
@@ -58,12 +63,13 @@ def Tackle():
         if block < damage:
             HP = HP - (damage - block)
             print 'He bites you, but you throw him off before he can hang on.'
-        HP = HP - (damage - block)
-        if block > 6:
-            block = block - 7
-            
-        else:
             block = 0
+            print 'You now have 0 shield points and ' + HP + ' HP.' 
+        elif block > damage and block > 0:
+            block = block - 7
+            print 'However, you swing your shield and knock it back before it can do any damage. You now have ' + block + ' shield points.'
+        else:
+            HP = HP - damage
             print 'He clings and starts inflicting damage, and you struggle for a moment until you throw him off.'
             print 'You get up with ' + str(HP) + ' health.'
         Wut = True
