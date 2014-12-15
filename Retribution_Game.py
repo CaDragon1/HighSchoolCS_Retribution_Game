@@ -56,7 +56,7 @@ def Tackle():
             print 'The undead minion does its best impression of a leap, somehow managing to catch you... AGAIN.'
         print 'He clings and starts inflicting damage, and you struggle for a moment until you throw him off.'
         damage = 7
-        HP = HP - damage + block
+        HP = HP - (damage - block)
         if block > 6:
             block = block - 7
         else:
@@ -72,23 +72,40 @@ def darkPulse():
     global bossHP
     if bossHP > 0:
         if bossHP > 50:
-            damage = 8
+            damage = 6
         else:
             damage = 10
         print "A wave of darkness sweeps out from the revenant. You struggle in the suffocating, crushing shadow."
         if damage < block:
-            HP = damage - block
             block = block - damage
             print "Your shield protected you against the attack and the darkness recedes, leaving you with " + str(block) + " shield points."
         elif damage > block and block > 0:
-            HP = damage - block
+            HP = HP - (damage - block)
             block = 0
             print "Your shield blocks some of the attack, but your shield points dropped to 0 and you are forced to take a knee to endure the rest. The darkness recedes and you stand up with " + str(HP) + "HP left."
         else:
-            HP = damage - block
+            HP = HP - (damage - block)
             print "The darkness damages you, knocking you to the ground. You lay there as the shadows press around you until they recede. You pick yourself off the ground with " + str(HP) + "HP left."
     return
-#Your moves
+def bonePierce():
+    global damage
+    global HP
+    global block
+    global BossHP
+    if bossHP > 0:
+        damage = 8
+    print 'The revenant summons a sharp spear of bone and hurls it at you.'
+    if damage < block:
+        block = block - damage
+        print 'You lift your shield just in time and the spear clatters against the shield. You have ' + str(block) + ' shield points.'
+    elif damage > block and block > 0:
+        HP = damage - block
+        block = 0
+        print 'You start to raise your shield, but it merely deflects it, causing it to graze you. You have 0 shield points and ' + str(HP) + ' health points.'
+    else:
+        HP = HP - damage
+        print 'The spear hits you. You now have ' + str(HP) + ' HP left.'
+#Your moves'
 def slash():
         global damage
         global minionHP
