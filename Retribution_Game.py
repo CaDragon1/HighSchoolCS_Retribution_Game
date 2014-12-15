@@ -253,13 +253,16 @@ userInput = raw_input()
 if userInput == "":
     print name + ": What is the assignment?"
 print "Warden: You will be informed once you arrived. There is a carriage outside that will take you to Felador. Once you arrive, you will recieve further instructions."
+userInput = raw_input()
 if userInput == "":
     print ""
 print " -About 15-20 minutes later, " + name + "appears at Felador.-"
+userInput = raw_input()
 if userInput == "":
     print ''
 print name + " walks up to Felador Castle, where two guards meet him."
 print 'Guard 1: What brings you here?'
+userInput = raw_input()
 if userInput == "":
     print ''
 print name + ": My name is " + name + ". I was sent here from Regolith prison. They said that there was a task for me...?"
@@ -273,18 +276,36 @@ print name + " opens the huge door and walks through. Inside he spots an armored
 print "It is because of this that you can tell that he is the captain."
 userInput = raw_input()
 if userInput == "":
-print " You can smell something but you disregard it.. But you follow the map to"
+    print ''
+print 'Captain: Who are you?'
 userInput = raw_input()
 if userInput == "":
-print ""
-print "You walk for around 10 minutes, following the map, and you finally find something interesting.."
+    print ""
+print name + ': I am ' + name + ", I was sent from Regolith prison. Do you know what I am here for?"
+print 'Captain: Right. Well, to answer your question, yes. You are here to run a mission for us. You see, we have recently had a revenant take up residence inside our dungeon.'
+print 'Captain: We sent one of the cleaning staff to take care of it, but he has not returned. We decided that we would offer up your freedom if you could help us out.'
 userInput = raw_input()
 if userInput == "":
-print ""
-print "You find an undead minion on the floor..."
+    print ""
+print name + ': Why specifically me?'
+print 'Captain: Well, you were one of our best behaved prisoners and we are short on cleaning staff. The door to the dungeon is down the hall to your left.'
+print name + ': How will I beat it?'
+print 'Captain: Here is a sword, a shield, and some leather armour. It should be sufficient.'
 userInput = raw_input()
 if userInput == "":
-print ""
+    print ''
+print "You walk down the hall until you come across the dungeon door. You open it and descend the stone steps that are lit by the flickering wall torches."
+userInput = raw_input()
+if userInput == "":
+    print ""
+print "You reach the bottom after a short time, but you hear moans up ahead."
+userInput = raw_input()
+if userInput == "":
+    print ""
+print "You find an undead minion on the floor. It appears to not be able to get up. You shudder; fighting zombies is not your idea of fun."
+userInput = raw_input()
+if userInput == "":
+    print ""
 print "It's already bleeding out on the floor from the previos person.. and you just step on it to finish it off."
 print "You continute walking.. and you see a bloody sign saying chamber of the Phantom Revenant."
 print "You don't think anything of it. And you continue watching it"
@@ -293,7 +314,7 @@ print "You feel it getting a LOT hotter... and also getting gnawed on by a bunch
 print "You beat the little grunts off of you as fast as you are able to, in disbelief aswell."
 userInput = raw_input()
 if userInput == "":
-print ""
+    print ""
 print "You keep walking and you spot the phantom.. phantom revenant."
 print "You... you are the one who has the items i need... you aren't leaving here alive.."
 print "You have multiple attacks to attack the Revenant, use them wisely."
