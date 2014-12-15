@@ -20,14 +20,18 @@ def Swipe():
         global damage
         global HP
         global block
-        print 'The undead minion swipes at you, striking you in the chest.'
         damage = 3
         HP = HP - damage + block
-        if block > 2:
+        if block > damage:
             block = block - 3
-        else:
+            print 'The undead minion tries to swipe at you, but you block with your shield. You now have ' + str(block) + ' shield points.'
+        elif block < damage and block > 0:
             block = 0
-        print 'You now have ' + str(HP) + ' health left.'
+            HP = HP - (damage - block) 
+            print 'The undead minion grazes you, breaking through your defenses. You have 0 shield points left and ' + str(HP) + ' HP left.'
+        else:
+            HP = HP - damage
+            print 'The undead minion swipes at you, striking you in the chest. You have ' + str(HP) + ' HP left.'
         return
 def Bite():
         global damage
@@ -39,11 +43,11 @@ def Bite():
         HP = HP - damage + block
         if block > damage:
             block = block - 5
-            print "Fortunately, it didn't bite through your tunic. You now have " + block + " shield points."
-        elif block > damage and block > 0:
+            print "Fortunately, it didn't bite through your tunic. You now have " + str(block) + " shield points."
+        elif block < damage and block > 0:
             block = 0
             HP = HP - (damage - block)
-            print 'You examine the wound, but it is not bad. You now have 0 shield points and ' + HP + ' HP.'
+            print 'You examine the wound, but it is not bad. You now have 0 shield points and ' + str(HP) + ' HP.'
         else:
             HP = HP - damage
             print 'You examine the wound and see it bleeding out. You are left with ' + str(HP) + ' HP.'
@@ -64,10 +68,10 @@ def Tackle():
             HP = HP - (damage - block)
             print 'He bites you, but you throw him off before he can hang on.'
             block = 0
-            print 'You now have 0 shield points and ' + HP + ' HP.' 
+            print 'You now have 0 shield points and ' + str(HP) + ' HP.' 
         elif block > damage and block > 0:
             block = block - 7
-            print 'However, you swing your shield and knock it back before it can do any damage. You now have ' + block + ' shield points.'
+            print 'However, you swing your shield and knock it back before it can do any damage. You now have ' + str(block) + ' shield points.'
         else:
             HP = HP - damage
             print 'He clings and starts inflicting damage, and you struggle for a moment until you throw him off.'
@@ -244,7 +248,7 @@ while nameName == False:
 
 print "(Remember to advance text using the enter/return key!)"
 print ''
-print "Warden: So you're the lucky prisoner, eh " + name + "? You have been given an assignment. If you can complete it, then you can go free."
+print "Warden: So you're the lucky prisoner, " + name + "? You have been given an assignment. If you can complete it, then you can go free."
 userInput = raw_input()
 if userInput == "":
     print name + ": What is the assignment?"
