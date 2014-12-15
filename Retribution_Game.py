@@ -94,17 +94,38 @@ def bonePierce():
     global BossHP
     if bossHP > 0:
         damage = 8
-    print 'The revenant summons a sharp spear of bone and hurls it at you.'
-    if damage < block:
-        block = block - damage
-        print 'You lift your shield just in time and the spear clatters against the shield. You have ' + str(block) + ' shield points.'
-    elif damage > block and block > 0:
-        HP = damage - block
-        block = 0
-        print 'You start to raise your shield, but it merely deflects it, causing it to graze you. You have 0 shield points and ' + str(HP) + ' health points.'
-    else:
-        HP = HP - damage
-        print 'The spear hits you. You now have ' + str(HP) + ' HP left.'
+        print 'The revenant summons a sharp spear of bone and hurls it at you.'
+        if damage < block:
+            block = block - damage
+            print 'You lift your shield just in time and the spear clatters against the shield. You have ' + str(block) + ' shield points.'
+        elif damage > block and block > 0:
+            HP = HP - (damage - block)
+            block = 0
+            print 'You start to raise your shield, but it merely deflects it, causing it to graze you. You have 0 shield points and ' + str(HP) + ' health points.'
+        else:
+            HP = HP - damage
+            print 'The spear hits you. You now have ' + str(HP) + ' HP left.'
+    return
+def condemn():
+    global damage
+    global HP
+    global block
+    global BossHP
+    if bossHP > 0:
+        damage = 10
+        if damage < block:
+            block = block - damage
+            print "You see a dangerous glint in the Revenant's eyes, but you quickly throw off the foreboding feeling that accompanied it. You see it swing its scythe and you raise your shield, blocking it."
+            print "You now have " + str(block) + " shield points left."
+        elif damage > block and block > 0:
+            HP = HP - (damage - block)
+            block = 0
+            print "The revenant's eyes flash and you feel condemmed. You look up and see the revenant's scythe falling. It glances off of your just raised shield and scrapes you."
+            print 'You have 0 shield points and ' + str(HP) + ' HP left.'
+        else:
+            HP = HP - damage
+            print "The revenant's eyes flash and you get a feeling of impending doom. You look up just in time to see his scythe swipe down on you. You now have " + HP + ' HP left.'
+    return
 #Your moves'
 def slash():
         global damage
