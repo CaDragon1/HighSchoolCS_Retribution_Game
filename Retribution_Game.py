@@ -54,14 +54,18 @@ def Tackle():
             print 'The undead minion does its best impression of a leap, somehow managing to catch you.'
         if Wut == True:
             print 'The undead minion does its best impression of a leap, somehow managing to catch you... AGAIN.'
-        print 'He clings and starts inflicting damage, and you struggle for a moment until you throw him off.'
         damage = 7
+        if block < damage:
+            HP = HP - (damage - block)
+            print 'He bites you, but you throw him off before he can hang on.'
         HP = HP - (damage - block)
         if block > 6:
             block = block - 7
+            
         else:
             block = 0
-        print 'You get up with ' + str(HP) + ' health.'
+            print 'He clings and starts inflicting damage, and you struggle for a moment until you throw him off.'
+            print 'You get up with ' + str(HP) + ' health.'
         Wut = True
     return
 #Boss moves
